@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"bdd": "cucumber-js || true",
 		"test": "bash dojo-helper.sh",
+		"bdd:watch": "nodemon --quiet --ext js --watch ./ --exec npm run bdd --delay 2",
 		"test:watch": "nodemon --quiet --ext js --watch ./ --exec bash dojo-helper.sh --delay 2",
 		"test:coverage": "jest --collectCoverage --verbose",
 		"lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
@@ -22,8 +24,10 @@
 	},
 	"author": "",
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+	},
 	"devDependencies": {
+		"@cucumber/cucumber": "^7.3.1",
 		"eslint": "^7.32.0",
 		"eslint-config-airbnb-base": "^14.2.1",
 		"eslint-config-prettier": "^8.3.0",

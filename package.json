@@ -1,0 +1,41 @@
+{
+	"name": "jumpstart-bdd",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "bash dojo-helper.sh",
+		"test:watch": "nodemon --quiet --ext js --watch ./ --exec bash dojo-helper.sh --delay 2",
+		"test:coverage": "jest --collectCoverage --verbose",
+		"lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+		"lint:fix": "eslint \"**/*.js\" --fix --ignore-pattern node_modules/"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"coveragePathIgnorePatterns": [
+			"/node_modules/"
+		]
+	},
+	"author": "",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-jest": "^24.5.2",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-security": "^1.4.0",
+		"jest": "^27.2.4",
+		"jest-cli": "^27.2.4",
+		"node-notifier": "^10.0.0",
+		"nodemon": "^2.0.13",
+		"prettier-eslint": "^13.0.0"
+	}
+}
